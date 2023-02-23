@@ -57,34 +57,41 @@ window.addEventListener("load", (_event) => {
 
   // Creates a fake page to display the recipe
   const createRecipePage = (recipe) => {
-    const recipeSection = createTagNode(recipesList, "div", "recipe-section");
     const recipeItem = createTagNode(recipesList, "li", "recipe-page");
 
-    createTagNode(recipeSection, "h3", "recipe", recipe.title);
-    createTagNode(recipeItem, "div", "recipe-page__ingredients-box");
+    createTagNode(recipeItem, "h2", "recipe-page__title", recipe.title);
 
+    createTagNode(recipeItem, "h3", "recipe-page__subtitle", "Ingredients");
     // Splits the ingredients string into an array
     const ingredients = recipe.ingredients.split("|");
     ingredients.forEach((ing) => {
-      createTagNode(recipeItem, "p", "recipe-page__ingredients", ing);
+      createTagNode(
+        recipeItem,
+        "li",
+        "recipe-page__ingredients",
+        ing.toLowerCase()
+      );
     });
 
+    createTagNode(recipeItem, "h3", "recipe-page__subtitle", "Instructions");
     createTagNode(
       recipeItem,
       "p",
       "recipe-page__instructions",
-      recipe.instructions.replaceAll(".", ".\n")
+      recipe.instructions.replaceAll(".", ".\n").toLowerCase()
     );
 
     createTagNode(recipeItem, "p", "recipe-page__servings", recipe.servings);
 
-    createTagNode(recipeItem, "button", "recipe-page", "BACK").addEventListener(
-      "click",
-      (_e) => {
-        recipesList.innerHTML = "";
-        temp.forEach(createDrinkCard);
-      }
-    );
+    createTagNode(
+      recipeItem,
+      "button",
+      "recipe-page__back-bt",
+      "BACK"
+    ).addEventListener("click", (_e) => {
+      recipesList.innerHTML = "";
+      temp.forEach(createDrinkCard);
+    });
   };
 
   // Creates a Drink Card
