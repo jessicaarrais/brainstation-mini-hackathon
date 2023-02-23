@@ -12,15 +12,15 @@
 .header {
   height: 4rem;
   width: 100%;
-  background-color: #323232;
+  background-color: #ccd4bf;
   display: flex;
   justify-content: center;
 
   &__title {
-    font-size: 1.5rem;
-    color: rgb(255, 253, 253);
+    font-size: 2rem;
+    color: darkslategray;
     font-weight: 600;
-    background-color: #323232;
+
     margin-top: 0.5rem;
   }
   &__subtitle {
@@ -81,38 +81,56 @@
 }
 
 .result-container {
-  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 20%);
-  transition: 0.3s;
+  margin: 2rem auto;
   border-radius: 10px;
-  padding: 0.25rem;
-  border: solid black;
   width: 70%;
-  background-color: yellow;
+  background-color: #ccd4bf;
   padding: 1.5rem;
 }
 
 .recipe-card {
   list-style-type: none;
-  display: inline-flex;
   flex-direction: column;
   align-items: center;
   &__title {
     font-weight: 600;
     font-size: 1.75rem;
+  }
+  &__servings {
+    font-size: 0.7rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+}
+.recipe-page {
+  padding: 2rem;
+
+  &__title {
+    font-weight: 600;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
   &__subtitle {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 2rem;
     text-decoration: underline;
   }
   &__ingredients {
-    font-size: 0.75rem;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
   }
   &__instructions {
-    font-size: 0.7rem;
     line-height: 1.5;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
   }
+  &__back-bt {
+    background-color: darkslategray;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 2rem;
+  }
+}
+
+.recipe-list {
+  // list-style-type: none;
 }
