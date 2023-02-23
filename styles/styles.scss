@@ -35,7 +35,6 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
     url(../assets/images/isorepublic-background-kitchen-1100x733.jpg);
   width: 100%;
-  height: 100vh;
   background-position: center;
   background-size: cover;
   align-items: center;
@@ -43,28 +42,44 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  padding: 1px;
   margin-bottom: 2rem;
+  margin-top: 3rem;
+  height: 2rem;
   &__search-bar {
-    display: block;
-    width: 100%;
-    border: solid black;
-    height: 2rem;
-    border-radius: 0.3rem;
-    margin: 0 auto;
+    flex-grow: 2;
+    border: none;
+    // display: block;
+    // width: 100%;
+    // border: solid black;
+    // height: 2rem;
+    // border-radius: 0.3rem;
+    // margin: 0 auto;
+  }
+  &__search-bar:focus {
+    outline: none;
   }
   &__button {
-    display: block;
-    width: 60%;
-    margin-left: 2.5rem;
-    border: solid black;
-    height: 2rem;
-    border-radius: 0.3rem;
+    // display: block;
+    // width: 60%;
+    // margin-left: 2.5rem;
+    // border: solid black;
+    // height: 2rem;
+    // border-radius: 0.3rem;
+    border: 1px solid blue;
+    background: blue;
+    color: white;
   }
 }
 
+.form:focus-within {
+  outline: 1px solid blue;
+}
+
 .result-container {
-  display: flex;
-  justify-content: center;
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 20%);
   transition: 0.3s;
   border-radius: 10px;
@@ -72,17 +87,31 @@
   border: solid black;
   width: 70%;
   background-color: yellow;
+  padding: 1.5rem;
 }
 
 .recipe-card {
   list-style-type: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   &__title {
     font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
   }
   &__subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: underline;
   }
   &__ingredients {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
   }
-  &__instructionss {
+  &__instructions {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
   }
 }
