@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url(../assets/images/isorepublic-background-kitchen-1100x733.jpg);
+    url(../assets/images/fetcher.jpg);
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -53,26 +53,15 @@
   &__search-bar {
     flex-grow: 2;
     border: none;
-    // display: block;
-    // width: 100%;
-    // border: solid black;
-    // height: 2rem;
-    // border-radius: 0.3rem;
-    // margin: 0 auto;
   }
   &__search-bar:focus {
     outline: none;
   }
   &__button {
-    // display: block;
-    // width: 60%;
-    // margin-left: 2.5rem;
-    // border: solid black;
-    // height: 2rem;
-    // border-radius: 0.3rem;
-    border: 1px solid blue;
-    background: blue;
+    border: none;
+    background: darkslategray;
     color: white;
+    padding: 0 1rem 0 1rem;
   }
 }
 
@@ -129,8 +118,4 @@
     border-radius: 0.3rem;
     margin-top: 2rem;
   }
-}
-
-.recipe-list {
-  // list-style-type: none;
 }
