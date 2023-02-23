@@ -1,4 +1,6 @@
 @use "./_partials/typography" as *;
+@use "./_partials/_variables" as *;
+@use "./_partials/mixins" as *;
 
 * {
   margin: 0;
