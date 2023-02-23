@@ -10,6 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./scripts/api-key.js"></script>
     <script src="./scripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
     <title>Find My Cocktail</title>
@@ -24,42 +25,15 @@
     <!------- FORM --------->
     <section class="content-container">
       <form class="form">
-        <input class="form__search-bar" type="text" name="search" />
+        <span class="form__validity"></span>
+        <input class="form__search-bar" type="text" name="searchbar" />
         <button class="form__button" type="submit">Search</button>
       </form>
 
       <!------- RESULT --------->
 
       <section class="result-container">
-        <ul class="recipe-list">
-          <li class="recipe-card">
-            <h3 class="recipe-card__title">Spaghetti</h3>
-            <h4 class="recipe-card__subtitle">ingredients</h4>
-            <ul class="recipe-card__ingredients">
-              <li>test</li>
-            </ul>
-            <p class="recipe-card__instructions">
-              pick up sticks, asfsfsfsf, sfsdfdfs, sfdsdfs, sdfsdfs Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit. Voluptate ullam
-              laboriosam et fuga velit? Doloremque voluptatibus cum quo
-              exercitationem quod vel corporis aliquam magni veritatis
-              voluptates quos, error numquam impedit.
-            </p>
-            <p class="recipe-card__servings">serves 1</p>
-          </li>
-
-          <li class="recipe-card">
-            <h3 class="recipe-card__title"></h3>
-            <img class="recipe-card__image" />
-            <p class="recipe-card__recipe"></p>
-          </li>
-
-          <li class="recipe-card">
-            <h3 class="recipe-card__title"></h3>
-            <img class="recipe-card__image" />
-            <p class="recipe-card__recipe"></p>
-          </li>
-        </ul>
+        <ul class="recipe-list"></ul>
       </section>
     </section>
   </body>
