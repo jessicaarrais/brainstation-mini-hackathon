@@ -12,14 +12,48 @@
     ></script>
     <script src="./scripts/api-key.js"></script>
     <script src="./scripts/script.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <title>Find My Cocktail</title>
   </head>
-  <body>
-    <form class="form">
-      <span class="form__validity"></span>
-      <input type="text" name="searchbar" />
-      <button class="submit">Search</button>
-    </form>
-    <ul class="container"></ul>
+
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Recipe Generator</h1>
+      <!-- <h1 class="header__subtitle">For your hangry needs</h1> -->
+    </header>
+
+    <!------- FORM --------->
+    <section class="content-container">
+      <form class="form">
+        <input class="form__search-bar" type="text" name="search" />
+        <button class="form__button" type="submit">Search</button>
+      </form>
+
+      <!------- RESULT --------->
+
+      <section class="result-container">
+        <ul class="recipe-list">
+          <li class="recipe-card">
+            <h3 class="recipe-card__title">Spaghetti</h3>
+            <h4 class="recipe-card__subtitle">ingredients</h4>
+            <p class="recipe-card__ingredients">ingredients</p>
+            <p class="recipe-card__instructions">pick up sticks</p>
+            <p class="recipe-card__servings">serves 1</p>
+          </li>
+
+          <li class="recipe-card">
+            <h3 class="recipe-card__title"></h3>
+            <img class="recipe-card__image" />
+            <p class="recipe-card__recipe"></p>
+          </li>
+
+          <li class="recipe-card">
+            <h3 class="recipe-card__title"></h3>
+            <img class="recipe-card__image" />
+            <p class="recipe-card__recipe"></p>
+          </li>
+        </ul>
+      </section>
+    </section>
   </body>
 </html>
